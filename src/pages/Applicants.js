@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import * as XLSX from "xlsx";
 import "./Applicants.css";
 import jobLogo from "../../src/assets/pngwing.com.png";
+import { IconButton, InputAdornment, TextField } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
+import styled from "styled-components";
 
 function Applicants() {
     const [applicants, setApplicants] = useState([]);
@@ -48,7 +51,22 @@ function Applicants() {
                         width: "80px",
                     }}
                 />
-                <p className="logo-text-applicant">JOB POSITIONS DATABASE</p>
+                <p className="logo-text-applicant">JOB POSITIONS LIBRARY</p>
+            </div>
+            <div className="SearchField">
+                <TextField
+                    label="Search"
+                    sx={{ width: "300px" }}
+                    InputProps={{
+                        endAdornment: (
+                            <InputAdornment>
+                                <IconButton>
+                                    <SearchIcon />
+                                </IconButton>
+                            </InputAdornment>
+                        ),
+                    }}
+                />
             </div>
             <table>
                 <thead>

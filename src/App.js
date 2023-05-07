@@ -13,8 +13,8 @@ function App() {
                 <Navbar />
                 <Routes>
                     <Route path="/" exact element={<Home />} />
-                    <Route path="/job-applicants" element={<Applicants />} />
-                    <Route path="/job-positions" element={<Projects />} />
+                    <Route path="/job-applicants" element={<Projects />} />
+                    <Route path="/job-positions" element={<Applicants />} />
                 </Routes>
             </Router>
         </>
