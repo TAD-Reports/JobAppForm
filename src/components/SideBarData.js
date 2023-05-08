@@ -17,7 +17,7 @@ export const SidebarData = [
         cName: "nav-text",
     },
     {
-        title: "Positions-Library",
+        title: "Positions Library",
         path: "/job-positions",
         icon: <BiIcons.BiLibrary />,
         cName: "nav-text",
