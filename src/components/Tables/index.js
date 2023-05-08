@@ -1,7 +1,9 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid, GridActionsCellItem } from "@mui/x-data-grid";
 import "./ApplicantsTable.css";
+import CreateIcon from "@mui/icons-material/Create";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 const columns = [
     {
@@ -91,6 +93,18 @@ const columns = [
         headerClassName: "header",
         headerClassName2: "header-bold",
     },
+    {
+        field: "actions",
+        headerName: "ACTIONS",
+        type: "actions",
+        width: 200,
+        headerClassName: "header",
+        headerClassName2: "header-bold",
+        getActions: (params) => [
+            <GridActionsCellItem icon={<CreateIcon />} label="edit" />,
+            <GridActionsCellItem icon={<DeleteIcon />} label="delete" />,
+        ],
+    },
 ];
 
 const rows = [
@@ -99,7 +113,7 @@ const rows = [
         position: "kahit ano",
         plantilia: "Flower Vase",
         paygrade: 35000,
-        salary: 40000,
+        salary: 30000,
         education: "Master's Degree",
         training: "kahit ano",
         experience: "kahit ano",
@@ -112,7 +126,7 @@ const rows = [
         position: "kahit ano",
         plantilia: "Flower Vase",
         paygrade: 35000,
-        salary: 40000,
+        salary: 20000,
         education: "Master's Degree",
         training: "kahit ano",
         experience: "kahit ano",
@@ -125,7 +139,7 @@ const rows = [
         position: "kahit ano",
         plantilia: "Flower Vase",
         paygrade: 35000,
-        salary: 40000,
+        salary: 10000,
         education: "Master's Degree",
         training: "kahit ano",
         experience: "kahit ano",
@@ -138,7 +152,7 @@ const rows = [
         position: "kahit ano",
         plantilia: "Flower Vase",
         paygrade: 35000,
-        salary: 40000,
+        salary: 9000,
         education: "Master's Degree",
         training: "kahit ano",
         experience: "kahit ano",
@@ -151,7 +165,7 @@ const rows = [
         position: "kahit ano",
         plantilia: "Flower Vase",
         paygrade: 35000,
-        salary: 40000,
+        salary: 1000,
         education: "Master's Degree",
         training: "kahit ano",
         experience: "kahit ano",
@@ -177,7 +191,7 @@ const rows = [
         position: "kahit ano",
         plantilia: "Flower Vase",
         paygrade: 35000,
-        salary: 40000,
+        salary: 100000,
         education: "Master's Degree",
         training: "kahit ano",
         experience: "kahit ano",

@@ -5,6 +5,9 @@ import { SidebarData } from "../SideBarData";
 import "./Navbar.css";
 import { IconContext } from "react-icons";
 import philFIDAimage from "../../assets/philfida.png";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import { Typography } from "@mui/material";
+import userLogo from "../../assets/userlogo.png";
 
 function Navbar() {
     const [sidebar, setSidebar] = useState(false);
@@ -13,15 +16,6 @@ function Navbar() {
         <>
             <IconContext.Provider value={{ color: "#fff" }}>
                 <div className="navbar">
-                    {/* <Link to="#" className="menu-bars">
-                        <FaIcons.FaBars
-                            style={{
-                                color: "black",
-                                height: "50px",
-                                width: "50px",
-                            }}
-                        />
-                    </Link> */}
                     <div className="logo-container">
                         <img
                             src={philFIDAimage}
@@ -39,17 +33,34 @@ function Navbar() {
                 </div>
                 <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
                     <ul className="nav-menu-items">
-                        {/* <li className="navbar-toggle">
-                            <Link to="#" className="menu-bars-x">
-                                <AiIcons.AiOutlineClose
-                                    style={{
-                                        color: "black",
-                                        height: "15px",
-                                        width: "15px",
-                                    }}
-                                />
-                            </Link>
-                        </li> */}
+                        <div
+                            className="user-icon"
+                            sx={{ textAlign: "center", marginBottom: "200px" }}
+                        >
+                            <img
+                                src={userLogo}
+                                alt="userlogo"
+                                style={{ height: "80px", width: "80px" }}
+                            />
+                            <Typography
+                                sx={{
+                                    fontFamily: "Poppins,sans-serif",
+                                    color: "#fff",
+                                }}
+                            >
+                                Salem, Mark Joseph V.
+                            </Typography>
+                            <Typography
+                                sx={{
+                                    fontFamily: "Poppins,sans-serif",
+                                    color: "#fff",
+                                    fontSize: "11px",
+                                }}
+                            >
+                                AUTHORIZED PERSONNEL
+                            </Typography>
+                        </div>
+
                         {SidebarData.map((item, index) => {
                             return (
                                 <li key={index} className={item.cName}>
