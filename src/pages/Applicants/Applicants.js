@@ -1,5 +1,5 @@
 import "./Applicants.css";
-import jobLogo from "../../src/assets/jobLogo.png";
+import jobLogo from "../../assets/jobLogo.png";
 import {
     Button,
     IconButton,
@@ -8,7 +8,7 @@ import {
     styled,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import ApplicantsTable from "../components/Tables/index";
+import ApplicantsTable from "../../components/Tables";
 
 import AddIcon from "@mui/icons-material/Add";
 
