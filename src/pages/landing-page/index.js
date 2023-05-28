@@ -4,15 +4,28 @@ import { Box, Button, Grid } from "@mui/material";
 import "./container.css";
 import MenuItems from "../../components/Menu-Items";
 import BodyContent from "../../assets/da-for-landingpage.jpg";
+import BackgroundImage from "../../assets/Background-Landingpage.jpg";
 
 export default function LandingPage() {
     return (
-        <Box className="Background">
+        <Box>
+            <Box
+                className="Background"
+                style={{
+                    backgroundImage: `linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7) 90%), url(${BackgroundImage})`,
+                    backgroundSize: "cover",
+                    position: "fixed",
+                    top: 0,
+                    left: 0,
+                    height: "100vh",
+                    width: "100vw",
+                }}
+            ></Box>
             <Grid
                 container
-                // justifyContent="flex-start"
-                // alignItems="flex-start"
                 style={{ borderWidth: "2px", width: "800px" }}
+                justifyContent="flex-start"
+                alignItems="flex-start"
             >
                 <MenuItems />
 
@@ -42,7 +55,7 @@ export default function LandingPage() {
                     }}
                 >
                     At PhilFIDA, we are passionate about fibercrops, supporting
-                    farmers, and promoting the use of fiber products.Our task
+                    farmers, and promoting the use of fiber products. Our task
                     agency is dedicated to fostering growth and sustainability
                     in the fiber industry. Whether you're a farmer looking to
                     enhance your crop yield, a manufacturer seeking quality
@@ -51,19 +64,26 @@ export default function LandingPage() {
                     this fiber revolution!
                     <br />
                 </motion.h2>
-                <Box
-                    sx={{
-                        display: "flex-end",
-                        justifyContent: "flex-end",
-                        position: "absolute",
-                        alignContent: "flex-end",
-                    }}
+            </Grid>
+
+            <Box
+                sx={{
+                    display: "flex-end",
+                    justifyContent: "flex-end",
+                    position: "absolute",
+                    alignContent: "flex-end",
+                }}
+            >
+                <motion.div
+                    initial={{ x: 1000, opacity: 0 }}
+                    animate={{ x: [300, 10], opacity: 1 }}
+                    transition={{ duration: 1, delay: 1.5 }}
                 >
                     <img
                         src={BodyContent}
                         alt="BodyContent"
                         style={{
-                            marginTop: "225px",
+                            marginTop: "-385px",
                             marginLeft: "1236px",
                             marginBottom: "10",
                             width: "1000px",
@@ -71,8 +91,8 @@ export default function LandingPage() {
                             objectFit: "cover",
                         }}
                     />
-                </Box>
-            </Grid>
+                </motion.div>
+            </Box>
 
             <Box
                 sx={{
@@ -135,6 +155,52 @@ export default function LandingPage() {
                         Go Back
                     </Button>
                 </motion.div>
+
+                <motion.img
+                    initial={{ x: -1000, opacity: 0 }}
+                    animate={{ x: [-300, 10], opacity: 1 }}
+                    transition={{ duration: 1, delay: 1.5 }}
+                    src={BodyContent}
+                    alt="BodyContent"
+                    style={{
+                        marginTop: "230px",
+                        // marginBottom: "100px",
+                        width: "1000px",
+                        height: "500px",
+                        objectFit: "cover",
+                        marginRight: "100px",
+                        marginLeft: "-160px",
+                        alignItems: "flex-end",
+                    }}
+                />
+
+                <motion.h2
+                    initial={{ x: 1000, opacity: 0 }}
+                    animate={{ x: [10, 350], opacity: 1 }}
+                    transition={{ duration: 1, delay: 0.8 }}
+                    justifyContent="left"
+                    alignItems="flex-end"
+                    style={{
+                        borderWidth: "2px",
+                        width: "800px",
+                        marginTop: "330px",
+                        marginBottom: "100px",
+                        marginLeft: "-350px",
+                        marginRight: "10px",
+                        color: "white",
+                        fontWeight: "normal",
+                    }}
+                >
+                    At PhilFIDA, we are passionate about fibercrops, supporting
+                    farmers, and promoting the use of fiber products. Our task
+                    agency is dedicated to fostering growth and sustainability
+                    in the fiber industry. Whether you're a farmer looking to
+                    enhance your crop yield, a manufacturer seeking quality
+                    fiber materials, or an enthusiast interested in learning
+                    about the wonders of fiber, we're here to help. Join us in
+                    this fiber revolution!
+                    <br />
+                </motion.h2>
             </Box>
         </Box>
     );
