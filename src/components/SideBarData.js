@@ -22,4 +22,10 @@ export const SidebarData = [
         icon: <BiIcons.BiLibrary />,
         cName: "nav-text",
     },
+    {
+        title: "Landing Page",
+        path: "/landing-page",
+        icon: <BiIcons.BiLibrary />,
+        cName: "nav-text",
+    },
 ];
