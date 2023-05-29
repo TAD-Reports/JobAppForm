@@ -126,8 +126,18 @@ export default function LandingPage() {
                             },
                         }}
                     >
-                        Apply Now!
+                        LOG IN!
                     </Button>
+                    <div
+                        style={{
+                            marginTop: "20px",
+                            fontSize: "15px",
+                            color: "white",
+                            marginLeft: "35px",
+                        }}
+                    >
+                        <h4>(For authorized personnel only)</h4>
+                    </div>
                 </motion.div>
                 <motion.div
                     initial={{ x: -1000, opacity: 0 }}
@@ -155,52 +165,6 @@ export default function LandingPage() {
                         Go Back
                     </Button>
                 </motion.div>
-
-                <motion.img
-                    initial={{ x: -1000, opacity: 0 }}
-                    animate={{ x: [-300, 10], opacity: 1 }}
-                    transition={{ duration: 1, delay: 1.5 }}
-                    src={BodyContent}
-                    alt="BodyContent"
-                    style={{
-                        marginTop: "230px",
-                        // marginBottom: "100px",
-                        width: "1000px",
-                        height: "500px",
-                        objectFit: "cover",
-                        marginRight: "100px",
-                        marginLeft: "-160px",
-                        alignItems: "flex-end",
-                    }}
-                />
-
-                <motion.h2
-                    initial={{ x: 1000, opacity: 0 }}
-                    animate={{ x: [10, 350], opacity: 1 }}
-                    transition={{ duration: 1, delay: 0.8 }}
-                    justifyContent="left"
-                    alignItems="flex-end"
-                    style={{
-                        borderWidth: "2px",
-                        width: "800px",
-                        marginTop: "330px",
-                        marginBottom: "100px",
-                        marginLeft: "-350px",
-                        marginRight: "10px",
-                        color: "white",
-                        fontWeight: "normal",
-                    }}
-                >
-                    At PhilFIDA, we are passionate about fibercrops, supporting
-                    farmers, and promoting the use of fiber products. Our task
-                    agency is dedicated to fostering growth and sustainability
-                    in the fiber industry. Whether you're a farmer looking to
-                    enhance your crop yield, a manufacturer seeking quality
-                    fiber materials, or an enthusiast interested in learning
-                    about the wonders of fiber, we're here to help. Join us in
-                    this fiber revolution!
-                    <br />
-                </motion.h2>
             </Box>
         </Box>
     );
