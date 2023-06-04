@@ -1,6 +1,7 @@
 import { Box, Button } from "@mui/material";
 import React from "react";
 import { motion } from "framer-motion";
+// import Logo from "../../assets/PHILFIDALOGO.png"
 
 function menuItems() {
     return (
@@ -10,6 +11,13 @@ function menuItems() {
             transition={{ duration: 1, delay: 1 }}
         >
             <Box sx={{ display: "inline-flex", marginLeft: "1780px" }}>
+
+          {/* <img
+            src={Logo}
+            alt="Logo"
+            style={{ height: "80px", width: "80px", marginRight: "100px" }}
+          /> */}
+
                 <Button
                     variant="text"
                     sx={{
